@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninico</title>
+
+
+    <link rel="icon" href="img/favicon.png">
+
+
+
+
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+         <!-- File CSS -->
+         <link rel="stylesheet" href="CSS/style.css">
+    </head>
+<body>
+
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+            <span onclick="open_close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+
+        <div class="items_in_cart" id="cart_items">
+
+
+
+        </div>
+        <div class="bottom_cart">
+            <div class="total">
+                <p>subtotal</p>
+                <p class="price_cart_toral">$0</p>
+            </div>
+
+            <div class="button_cart">
+                <a href="#" class="btn_cart btn">Checkout</a>
+                <span onclick="open_close_cart()" class="btn_cart trans_bg btn">Shop More</span>
+            </div>
+        </div>
+
+    </div>
+
+    <header>
+        <div class="top_header">
+            <div class="container">
+                <a href="#" class="logo"> <img src="img/logo.png" alt=""></a>
+
+                <form action="" class="search_box">
+
+                    <div class="select_box">
+                        <select id="category" name="category">
+
+                            <option value="Wooden">Wooden</option>
+                            <option value="Fashion">Fashion</option>
+                            <option value="Cosmatics">Cosmatics</option>
+                            <option value="Furnture">Furnture</option>
+
+                        </select>
+                    </div>
+
+                    <input type="text" name="search" id="search" placeholder="Search for Products" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+             
+
+                    
+
+                </form>
+
+                <div class="header_icons">
+                    <div class="icon">
+                        <a href="#">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                    </div>
+
+                    <div onclick="open_close_cart()" class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="count count_item_header">0</span>
+                        
+                    </div>
+                   
+                </div>
+                <button id="logoutBtn" class="btn btn-outline-danger aaaa" type="button">LogOut</button>
+                <span class="navbar-text me-3 text-black" id="userName"></span>
+            </div>
+        </div>
+
+
+        <div class="bottom_header">
+            <div class="container">
+                <nav class="nav">
+
+                    <span onclick="open_Menu()" class="open_menu"><i class="fa-solid fa-bars"></i></span>
+
+                    <div class="category_nav">
+
+                        <div onclick="Open_Categ_list()" class="category_btn">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>All Category</p>
+                            <i class="fa-solid fa-angle-down"></i>
+
+                        </div>
+
+
+                        <div class="category_nav_list">
+                            <a href="#">
+                                <i class="fa-regular fa-user"></i>
+                                Candles</a>
+                            <a href="#"><i class="fa-solid fa-fan"></i>
+                                Hand Made</a>
+                            <a href="#"><i class="fa-solid fa-gift"></i> 
+                                Gift Sets</a>
+                            <a href="#"><i class="fa-brands fa-web-awesome"></i>
+                                Cosmatisc</a>
+                            <a href="#">Silk Accessories</a>
+                            <a href="#"><i class="fa-regular fa-face-smile"></i>
+                                Plastics Gift</a>
+                            <a href="#">
+                                <i class="fa-solid fa-futbol"></i>
+                                Hand Creamy</a>
+                        </div>
+
+                    </div>
+
+                    <ul class="nav_links">
+
+                        <span onclick="open_Menu()" class="close_menu"><i class="fa-regular fa-circle-xmark"></i></span>
+
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Accesories</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+
+                    </ul>
+
+                </nav>
+
+
+            </div>
+        </div>
+
+        
+    </header>
+
+
+    <div class="slider">
+        <div class="container">
+
+
+            <!-- Swiper -->
+        <div class="slide-swp mySwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <h3>Accessories</h3>
+                        <h1>Up To <span>45% Off</span><br>Latest Creations</h1>
+                        <p>Discover our newest designs and save big!</p>
+                        <a href="#" class="button">Shop Now →</a>
+                    </div>
+                    <img src="img/banner-1.jpg" alt="Banner 1">
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <h3>Handmade</h3>
+                        <h1>Exclusive <span>30% Off</span><br>Crafted Items</h1>
+                        <p>Unleash the beauty of handmade gifts today!</p>
+                        <a href="#" class="button">Shop Now →</a>
+                    </div>
+                    <img src="img/banner-2.jpg" alt="Banner 2">
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <div class="slide-content">
+                        <h3>Gift Sets</h3>
+                        <h1>Special <span>20% Discount</span><br>For You</h1>
+                        <p>Gift happiness with our exclusive sets!</p>
+                        <a href="#" class="button">Shop Now →</a>
+                    </div>
+                    <img src="img/banner-3.jpg" alt="Banner 3">
+                </div>
+            </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+
+
+            <div class="banner_2">
+                <div class="banner-item">
+                    <a href="#">
+                        <div class="banner-content">
+                            <p class="subtitle">Hand made</p>
+                            <h3 class="title">New Modern & Stylist Crafts</h3>
+                        </div>
+                        <img src="img/banner-slider-01.jpg" alt="Accessories">
+                    </a>
+                </div>
+                <!-- <div class="banner-item">
+                    <a href="#">
+                        <div class="banner-content">
+                            <p class="subtitle">Hand made</p>
+                            <h3 class="title">New Modern & Stylist Crafts</h3>
+                        </div>
+                        <img src="img/banner-2-04.jpg" alt="Accessories">
+                    </a>
+                </div> -->
+             
+                
+                <div class="banner-item">
+                    <a href="#">
+                        <div class="banner-content">
+                            <p class="subtitle">Popular</p>
+                            <h3 class="title">Energy with our collection</h3>
+                        </div>
+                        <img src="img/banner-1.png" alt="Latest Creations">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+
+
+    <div class="banners_4">
+        <div class="container">
+
+
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+
+                <img src="img/slider-bg-04.png" alt="">
+                <div class="text">
+                    <h5>deals on this</h5>
+
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>30%</span>
+                    </div>
+
+                    <h6>Shop Now →</h6>
+
+                </div>
+            </div>
+
+
+            
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+
+                <img src="img/slider-05.png" alt="">
+                <div class="text">
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>20%</span>
+                    </div>
+
+                    <h6>Shop Now →</h6>
+
+                </div>
+            </div>
+
+
+            
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+
+                <img src="img/slider-04.png" alt="">
+                <div class="text">
+                 
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>70%</span>
+                    </div>
+
+                    <h6>Shop Now →</h6>
+
+                </div>
+            </div>
+
+
+            
+            <div class="box">
+                <a href="#" class="link_btn"></a>
+
+                <img src="img/floded-01.png" alt="">
+                <div class="text">
+                    <h5>deals on this</h5>
+                    <div class="sale">
+                        <p>Up <br> To</p>
+                        <span>33%</span>
+    
+                    </div>
+                    <h6>Shop Now →</h6>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper">
+
+                <div class="top_slide">
+                    <h2>Hot <span>Products</span></h2>
+                </div>
+                
+                <div class="products swiper-wrapper" id="swiper_items_sale">
+
+             
+                   
+
+
+
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper">
+
+                <div class="top_slide">
+                    <h2> Wooden</h2>
+                </div>
+                
+                <div class="products swiper-wrapper" id="swiper_elctronics">
+
+             
+                   
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper">
+
+                <div class="top_slide">
+                    <h2> Cosmatics</h2>
+                </div>
+                
+                <div class="products swiper-wrapper" id="swiper_appliances">
+
+             
+                   
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="banners">
+        <div class="container">
+            <div class="banners_boxs banner_3_img">
+                <a href="#" class="box"><img src="img/slider-bg-04.png" alt=""></a>
+                <a href="#" class="box"><img src="img/slider-bg-06.png" alt=""></a>
+                <a href="#" class="box"><img src="img/slider-bg-05.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="slider_products slide">
+
+        <div class="container">
+
+            <div class="slide_product mySwiper">
+
+                <div class="top_slide">
+                    <h2> Fashion</h2>
+                </div>
+                
+                <div class="products swiper-wrapper" id="swiper_mobiles">
+
+             
+                   
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="container">
+
+            <div class="big_row">
+                <img class="logo_footer" src="img/logo-white.png" alt="">
+
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi, vero?</p>
+
+                <div class="icons_footer">
+                    <a href="#"><i class="fa-solid fa-phone"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Find It Fast</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Wooden</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Fashion</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Cosmatics</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Furnture</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Jewelry & Accesories</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Quick Links</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Your Account </a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Estimated Delivery Time</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <h4>Service us</h4>
+
+                <div class="links">
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Support Center</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Term & Conditions</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Privacy Policy</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+                    <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; <span>.</span> All Rights Reserved.</p>
+
+                <div class="payment_img">
+                    <img src="img/" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+       <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- File JS -->
+     
+      <script src="javaScript/item.js"></script>
+      <script src="javaScript/swp.js"></script>
+      <script src="javaScript/script.js"></script>
+      <script>
+        document.getElementById("logoutBtn").addEventListener("click", function () {
+    localStorage.removeItem("isLoggedIn"); 
+    window.location.href = "login.html"; 
+});
+document.addEventListener("DOMContentLoaded", function() {
+       
+       const userName = localStorage.getItem("fullName");
+
+       if (userName) {
+           document.getElementById("userName").textContent = `Hello  ${userName}`;
+       } else {
+           document.getElementById("userName").textContent = "Guest";
+       }
+    });
+    
+    document.addEventListener("DOMContentLoaded", function () {
+    let totalCartPrice = 0;
+    
+    function updateCartTotal() {
+        document.querySelector(".price_cart_toral").textContent = `$${totalCartPrice.toFixed(2)}`;
+    }
+    
+    document.querySelectorAll(".btn-dark").forEach(button => {
+        button.addEventListener("click", function () {
+            let card = this.closest(".card");
+            let productPrice = parseFloat(card.querySelector(".product-price").textContent.replace("$", ""));
+            
+            totalCartPrice += productPrice;
+            updateCartTotal();
+        });
+    });
+    
+    document.querySelector(".btn_cart").addEventListener("click", function () {
+        if (totalCartPrice > 0) {
+            alert("Proceeding to checkout...");
+        } else {
+            alert("Your cart is empty!");
+        }
+    });
+    
+    document.querySelector(".trans_bg").addEventListener("click", function () {
+        alert("Continue shopping!");
+    });
+});
+
+      </script>
+</body>
+</html>
